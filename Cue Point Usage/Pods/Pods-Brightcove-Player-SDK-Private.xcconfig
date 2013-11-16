@@ -1,0 +1,6 @@
+#include "Pods-Brightcove-Player-SDK.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/Brightcove-Player-SDK" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/Brightcove-Player-SDK" "${PODS_ROOT}/Headers/ReactiveCocoa" "${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa"
+LIBRARY_SEARCH_PATHS = ${PODS_BRIGHTCOVE_PLAYER_SDK_LIBRARY_SEARCH_PATHS}
+OTHER_LDFLAGS = -ObjC ${PODS_BRIGHTCOVE_PLAYER_SDK_OTHER_LDFLAGS}
+PODS_ROOT = ${SRCROOT}

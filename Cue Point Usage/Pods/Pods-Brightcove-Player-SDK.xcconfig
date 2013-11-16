@@ -1,0 +1,2 @@
+PODS_BRIGHTCOVE_PLAYER_SDK_LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/Brightcove-Player-SDK/Library"
+PODS_BRIGHTCOVE_PLAYER_SDK_OTHER_LDFLAGS = -lBCOVPlayerSDK -framework AVFoundation -framework CoreMedia -framework MediaPlayer
