@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 // forward references for facade and facadedelegate protocols and the catalog service class
 @protocol BCOVPlaybackFacade;
 @protocol BCOVPlaybackFacadeDelegate;
-
 @class BCOVCatalogService;
 // create media request factory
 // allows access to Catalog for Japan accounts
