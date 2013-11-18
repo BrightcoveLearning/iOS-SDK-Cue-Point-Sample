@@ -8,7 +8,6 @@
 
 #import "CPUViewController.h"
 // import the SDK master header and RAC EXTScope header
-#import "BCOVPlayerSDK.h"
 #import "ReactiveCocoa/RACEXTScope.h"
 
 @interface CPUViewController ()

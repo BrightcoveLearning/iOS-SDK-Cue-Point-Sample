@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+// import the SDK master header
+#import <BCOVPlayerSDK.h>
 
 
-// forward references for facade and facadedelegate protocols and the catalog service class
-@protocol BCOVPlaybackFacade;
-@protocol BCOVPlaybackFacadeDelegate;
+// forward reference for the catalog service class
 @class BCOVCatalogService;
-// create media request factory
+// forward reference for the media request factory
 // allows access to Catalog for Japan accounts
 // and via proxy
 @class BCOVMediaRequestFactory;
@@ -21,7 +21,7 @@
 
 @interface CPUViewController : UIViewController <BCOVPlaybackFacadeDelegate>
 
-// declare the facade and catalog properties
+// declare the facade, catalog, and media request factory properties
 @property (strong, nonatomic) id<BCOVPlaybackFacade> facade;
 @property (strong, nonatomic) BCOVCatalogService *catalog;
 // declare property for the media request factory
