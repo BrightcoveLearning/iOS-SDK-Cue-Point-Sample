@@ -31,7 +31,7 @@
     
     self.catalog = [[BCOVCatalogService alloc] initWithMediaRequestFactory:self.mediaRequestFactory];
     
-    self.facade = [[BCOVPlayerSDKManager sharedManager] newPlaybackFacadeWithFrame:self.view.frame];
+    self.facade = [[BCOVPlayerSDKManager sharedManager] createPlaybackFacadeWithFrame:self.view.frame];
     // create a facade delegate
     [self.facade setDelegate:self];
     
