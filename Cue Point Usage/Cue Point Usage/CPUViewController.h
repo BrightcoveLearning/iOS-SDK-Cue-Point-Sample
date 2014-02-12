@@ -19,10 +19,10 @@
 @class BCOVMediaRequestFactory;
 
 
-@interface CPUViewController : UIViewController <BCOVPlaybackFacadeDelegate>
+@interface CPUViewController : UIViewController <BCOVPlaybackControllerDelegate>
 
-// declare the facade, catalog, and media request factory properties
-@property (strong, nonatomic) id<BCOVPlaybackFacade> facade;
+// declare the playback controller, catalog, and media request factory properties
+@property (strong, nonatomic) id<BCOVPlaybackController> controller;
 @property (strong, nonatomic) BCOVCatalogService *catalog;
 // declare property for the media request factory
 @property (strong, nonatomic) BCOVMediaRequestFactory *mediaRequestFactory;
