@@ -1,5 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/Brightcove-Player-SDK" "${PODS_ROOT}/Headers/ReactiveCocoa" "${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa"
 LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/Brightcove-Player-SDK/Library"
+OTHER_CFLAGS = $(inherited) "-isystem${PODS_ROOT}/Headers" "-isystem${PODS_ROOT}/Headers/Brightcove-Player-SDK" "-isystem${PODS_ROOT}/Headers/ReactiveCocoa" "-isystem${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa"
 OTHER_LDFLAGS = -ObjC -lBCOVPlayerSDK -framework AVFoundation -framework CoreMedia -framework MediaPlayer
 PODS_ROOT = ${SRCROOT}/Pods

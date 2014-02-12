@@ -31,12 +31,13 @@
     
     self.catalog = [[BCOVCatalogService alloc] initWithMediaRequestFactory:self.mediaRequestFactory];
     
-    self.facade = [[BCOVPlayerSDKManager sharedManager] createPlaybackFacadeWithFrame:self.view.frame];
-    // create a facade delegate
-    [self.facade setDelegate:self];
+    self.controller = [[BCOVPlayerSDKManager sharedManager] createPlaybackControllerWithViewStrategy:nil];
+    self.controller.view.frame = self.view.bounds;
+    // create a playback controller delegate
+    self.controller.delegate = self;
     
-    self.facade.view.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-    [self.view addSubview:[self.facade view]];
+    self.controller.view.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+    [self.view addSubview:self.controller.view];
     
     //This is how you play back videos
     @weakify(self);
@@ -44,29 +45,30 @@
     [self.catalog findVideoWithReferenceID:@"lucy" parameters:nil completion:^(BCOVVideo *video, NSDictionary *jsonResponse, NSError *error) {
         
         @strongify(self);
-        if(!error){
+        if(video){
             
             //Getting properties from the video, these keys can be found in BCOVCatalogConstants.h
-            NSLog(@"Name: %@", [video.properties objectForKey:kBCOVCatalogJSONKeyName]);
+            NSLog(@"Name: %@", video.properties[kBCOVCatalogJSONKeyName]);
             NSLog(@"Description: %@", video.properties[kBCOVCatalogJSONKeyShortDescription]);
             
             //Cue points can be iterated through if you want to understand the cuepoints before the video is played
-            for(BCOVCuePoint *point in [video cuePoints]){
+            for(BCOVCuePoint *point in video.cuePoints){
                 NSLog(@"Cue Point:%@", point);
             }
-            self.facade.queue.autoAdvance = YES;
-            self.facade.controller.autoPlay = YES;
+
+            self.controller.autoAdvance = YES;
+            self.controller.autoPlay = YES;
             
-            [self.facade setVideos:@[video]];
-            [self.facade advanceToNext];
+            [self.controller setVideos:@[video]];
+            [self.controller play];
         }
     }];
 	
 }
 
-//Using the facade delegate, you can take action when a cuepoint is hit
+//Using the playback controller delegate, you can take action when a cuepoint is hit
 
-- (void)playbackFacade:(id<BCOVPlaybackFacade>)facade playbackSession:(id<BCOVPlaybackSession>)session didPassCuePoints:(NSDictionary *)cuePointInfo{
+- (void)playbackController:(id<BCOVPlaybackController>)controller playbackSession:(id<BCOVPlaybackSession>)session didPassCuePoints:(NSDictionary *)cuePointInfo{
     
     NSLog(@"Cuepoint hit!");
     
