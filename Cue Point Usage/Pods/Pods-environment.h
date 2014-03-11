@@ -10,7 +10,7 @@
 #define COCOAPODS_POD_AVAILABLE_Brightcove_Player_SDK
 #define COCOAPODS_VERSION_MAJOR_Brightcove_Player_SDK 4
 #define COCOAPODS_VERSION_MINOR_Brightcove_Player_SDK 1
-#define COCOAPODS_VERSION_PATCH_Brightcove_Player_SDK 5
+#define COCOAPODS_VERSION_PATCH_Brightcove_Player_SDK 6
 
 // ReactiveCocoa
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa
