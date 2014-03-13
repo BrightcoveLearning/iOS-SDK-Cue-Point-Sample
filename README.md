@@ -1,4 +1,6 @@
 iOS-SDK-Cue-Point-Sample
 ========================
 
-Xcode project for http://docs.brightcove.com/en/video-cloud/brightcove-player-sdk-for-ios/sample-code/cue-point-usage/cue-point-usage.html
+Brightcove Player SDK for iOS sample using Cue Points
+
+Run `pod install` from the root of this repository and use the workspace that it generates to run the project.
