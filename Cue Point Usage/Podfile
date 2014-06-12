@@ -1,6 +1,6 @@
- platform :ios, '7.0' # (or whatever version you want to target)
+ platform :ios, '7.1' # (or whatever version you want to target)
 
- pod 'Brightcove-Player-SDK', '~> 4.1.6'
+ pod 'Brightcove-Player-SDK', '4.1.7'
 
 # Remove 64-bit build architecture from Pods targets
 post_install do |installer|

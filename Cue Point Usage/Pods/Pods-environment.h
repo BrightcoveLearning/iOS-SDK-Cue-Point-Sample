@@ -10,23 +10,29 @@
 #define COCOAPODS_POD_AVAILABLE_Brightcove_Player_SDK
 #define COCOAPODS_VERSION_MAJOR_Brightcove_Player_SDK 4
 #define COCOAPODS_VERSION_MINOR_Brightcove_Player_SDK 1
-#define COCOAPODS_VERSION_PATCH_Brightcove_Player_SDK 6
+#define COCOAPODS_VERSION_PATCH_Brightcove_Player_SDK 7
 
 // ReactiveCocoa
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa
 #define COCOAPODS_VERSION_MAJOR_ReactiveCocoa 2
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa 2
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa 4
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa 3
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa 1
 
 // ReactiveCocoa/Core
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_Core
 #define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_Core 2
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_Core 2
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_Core 4
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_Core 3
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_Core 1
+
+// ReactiveCocoa/UI
+#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_UI
+#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_UI 2
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_UI 3
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_UI 1
 
 // ReactiveCocoa/no-arc
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_no_arc
 #define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_no_arc 2
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_no_arc 2
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_no_arc 4
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_no_arc 3
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_no_arc 1
 
